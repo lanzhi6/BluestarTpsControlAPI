@@ -1,6 +1,6 @@
 package me.lanzhi.bluestartpscontrol;
 
-public interface BluestarControlAPI
+public interface BluestarTpsControlAPI
 {
     public boolean setmspt(long mspt) throws MsptIllegalException;
 

@@ -37,28 +37,28 @@ gradle
 ```
 
 使用
+
 ```java
-import me.lanzhi.bluestartpscontrol.BluestarControlAPI;
+import me.lanzhi.bluestartpscontrol.BluestarTpsControlAPI;
 
 class XXXPlugin extends JavaPlugin
 {
-    private BluestarControlAPI bluestarControlAPI;
-    
+    private BluestarTpsControlAPI bluestarTpsControlAPI;
+
     @Override
     public void onEnable()
     {
-        bluestarControlAPI=
-                Bukkit.getServicesManager().load(BluestarControlAPI.class);
-        if (bluestarControlAPI==null)
+        bluestarTpsControlAPI=Bukkit.getServicesManager().load(BluestarTpsControlAPI.class);
+        if (bluestarTpsControlAPI==null)
         {
-            System.out.println("为找到BluestarTpsControl");
+            System.out.println("未找到BluestarTpsControl");
         }
         //获取tick之间的等待时间
-        long time=bluestarControlAPI.getmspt();
+        long time=bluestarTpsControlAPI.getmspt();
         //设置tick之间的等待时间
-        bluestarControlAPI.setmspt(time);
+        bluestarTpsControlAPI.setmspt(time);
         //为tps附上对应颜色(例如tps低于18是黄色,低于16是红色)
-        String message=bluestarControlAPI.tpsFormat(tps);
+        String message=bluestarTpsControlAPI.tpsFormat(tps);
     }
 }
 ```
