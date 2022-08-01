@@ -6,11 +6,11 @@
 
     <groupId>me.lanzhi</groupId>
     <artifactId>BluestarTpsControlAPI</artifactId>
-    <version>1.0</version>
+    <version>3.0</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
 </project>
